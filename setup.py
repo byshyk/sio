@@ -1,6 +1,7 @@
 from os import path
 from setuptools import find_packages, setup
 
+
 about = {}
 with open(path.join('sio', '__version__.py'), 'r', encoding='utf-8') as f:
     exec(f.read(), about)
@@ -19,5 +20,5 @@ setup(
     author_email=about['__author_email__'],
     license=about['__license__'],
     packages=find_packages(),
-    install_requires=['shortio']
+    install_requires=['shortio>=0.1.0']
 )
