@@ -13,7 +13,7 @@ for name in shortio.__all__:
 
     if len(name_parts) > 1:
         prefix = ''.join([part[0] for part in name_parts[:-1]])
-        frmt = re.sub(VOWELS, '', name_parts[-1])
+        frmt = VOWELS.sub('', name_parts[-1])
         new_name = f'{prefix}{frmt}'
     else:
         new_name = name_parts[0][0]
